@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+    </head>
+    <style>
+        body{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             border-style: solid;
+             background-color: beige;
+             }
+        h1{color: rgb(74, 17, 217);
+           font: bolder;
+           text-shadow: 2px 1px 2px red;
+           padding: 20px;
+         }
+         label{text-align: left;
+               font-weight: bolder;
+            color:rgb(14, 13, 13);}
+        input:required , input:required{
+            border: 3px solid red;
+        }
+
+
+
+
+
+    </style>
+    
+    <h1><center><b><i><U>Registration Form</b><i></U></center></h1>
+        <form action="Res.html" method="get">
+            <img src="OIP.jpg" width="250px" height="250px" align="right">
+            <label>
+            <b> Student Name:
+                <input type=" text" placeholder=" First Name" name="fname" id="fid" autofocus required>
+                <input type=" text" placeholder="Middle Name" name="mname" id="mid">
+                <input type=" text" placeholder="Last Name" name="lname" id="last">
+             
+            </b><br></br>
+
+            <b> Student Id:
+                <input type="checkbox" name="c1" id="c1">Adhar Card
+                <input type="checkbox" name="c2" id="c2">PAN Card
+                <input type="checkbox" name="c3" id="c3">Passport
+            </b><br></br>
+            <label>Choose file to upload</label>
+                <input type="file" name="file" id="file" accept="image/*">
+            <br></br>
+
+            <b> Father's Name:
+                <input type="text" name="name" id="fathern"><br></br>
+
+            <b> Date Of Birth
+                <input type="date" name="dob" id="dob" required>
+            </b>
+
+            </b><br></br>
+            <b> Age:
+                <input type="number" placeholder="18" age="year" id="ageid" required>
+                
+            </b> <br></br>
+
+            <b> Mail id :
+                <input type="email" placeholder="abc@gmail.com" mail="email" id="emailid" required>
+
+            </b><br></br>
+
+            <b> Permanent Address 
+                <input type="text" address="add" id="addid" required>
+
+            </b><br></br>
+
+            <b> Contact Details
+                <input type="tel" value="+91 " placeholder="1234456789" number="number" id="numid" maxlength="14" required pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+
+            </b><br></br>
+
+            <b> Sex :
+                <input type="radio" id="mid" name="mgender">Male
+                <input type="radio" id="mid" name="mgender">Female
+                <input type="radio" id="mid" name="mgender">Other 
+
+            </b><br></br>
+
+            <b> 10th Qualification:<br></br>
+                Board of Examination <input type="text" id="boe" name="boe"><br></br></br>
+                Aggregate Percentage <input type="number" id="per" name="per"><br></br>
+
+                
+
+            </b><br></br>
+
+            <b> Qualification 12 :<br></br>
+                <select>
+                <option value="Science">Science</option> 
+                <option value="Commerce">Commerce</option>
+                <option value="Arts">Arts</option>      
+                </select>   <br></br>
+            <table border="1px"  >
+                <tr>
+                    <td> Subject
+                    </td> <td> Marks</td>
+                </tr>
+                <tr>
+                    <td> <input type="text "></td>
+                    <td> <input type="number"></td>
+                </tr> 
+                <tr>
+                    <td> <input type="text"> </td>
+                    <td> <input type="number"> </td>
+                </tr>
+                <tr>
+                    <td> <input type="text"> </td>
+                    <td> <input type="number">  </td>
+                </tr>
+                </table> <br></br>
+
+                <b> Aggregate Percentage 
+                    <input type="text" name="perct" id="pid">
+                </b>
+
+                </b>
+
+
+            </b>
+
+            <br><br><center>
+            <button type="submit">SUBMIT</button>
+            <button type="reset"> RESET</button></br></center></br>
+            </label>
+
+    
+        </form>
+</html>

@@ -1,0 +1,27 @@
+<!-- 8.	Write a function that takes in a string as a parameter and returns the length of the string. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+</head>
+<body>
+    <label for="num">Enter the String</label>
+    <input type="text" id="str">
+    <button onclick="len()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function len()
+        {
+            const num=document.getElementById("str").value;
+            let l=num.length;
+            document.getElementById("result").innerHTML=l;
+        }
+    </script>
+</body>
+</html>

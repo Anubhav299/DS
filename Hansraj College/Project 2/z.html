@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="xc.css">
+  </head>
+  
+  <body>
+    <h1>Expense Tracker</h1>
+
+    <!-- Form to add new expenses -->
+    <h2>Add New Expense</h2>
+    <form>
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description"><br>
+
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount"><br>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date"><br>
+
+      <input type="submit" value="Add Expense">
+    </form>
+
+    <!-- List to display existing expenses -->
+    <h2>Existing Expenses</h2>
+    <ul id="expense-list">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <!-- Section to manage friends or group members -->
+    <h2>Manage Friends/Group Members</h2>
+    <ul id="member-list">
+      <li>Member 1</li>
+      <li>Member 2</li>
+      <li>Member 3</li>
+    </ul>
+    <form>
+      <label for="member">Add Member:</label>
+      <input type="text" id="member" name="member"><br>
+
+      <input type="submit" value="Add Member">
+    </form>
+  </body>
+  <script type="text/javascript" src="split.js"></script>
+</html>

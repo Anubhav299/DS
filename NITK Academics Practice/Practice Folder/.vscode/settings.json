@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "value_vs_reference": "c",
+        "EOF.C": "cpp"
+    }
+}

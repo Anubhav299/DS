@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="">
+	<title>Split Bill</title>
+	<script>
+		var friends = [];
+		var expenses = {};
+
+		function addFriend() {
+			var friend = document.getElementById("new-friend").value;
+			if (friend != null && friend != "") {
+				friends.push(friend);
+				expenses[friend] = 0;
+				updateFriendsList();
+				document.getElementById("new-friend").value = "";
+			}
+		}
+
+		function removeFriend(friend) {
+			var index = friends.indexOf(friend);
+			if (index !== -1) {
+				friends.splice(index, 1);
+				delete expenses[friend];
+				updateFriendsList();
+			}
+		}
+
+		function updateFriendsList() {
+			var list = document.getElementById("friends-list");
+			list.innerHTML = "";
+			for (var i = 0; i < friends.length; i++) {
+				var item = document.createElement("li");
+				item.textContent = friends[i];
+				var removeButton = document.createElement("button");
+				removeButton.textContent = "Remove";
+				removeButton.onclick = (function(friend) {
+					return function() 
+					{
+						removeFriend(friend);
+					}
+				})(friends[i]);
+				item.appendChild(removeButton);
+				var expense = document.createElement("span");
+				item.appendChild(expense);
+				list.appendChild(item);
+			}
+		}
+
+		function splitExpense() {
+			var totalExpense = document.getElementById("total-expense").value;
+			if (totalExpense != null && totalExpense != "") {
+				var countFriends = friends.length;
+				var share = totalExpense / countFriends;
+				for (var i = 0; i < friends.length; i++) {
+					expenses[friends[i]] = share;
+				}
+				updateExpenses();
+				document.getElementById("total-expense").value = "";
+			}
+		}
+
+		function updateExpenses() {
+			var result = document.getElementById("result");
+			result.innerHTML = "";
+			for (var i = 0; i < friends.length; i++) {
+				var expense = document.createElement("div");
+				expense.textContent = friends[i] + ": " + expenses[friends[i]];
+				result.appendChild(expense);
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Split Bill</h1>
+	<div class="container">
+		<label>Total Expense</label>
+		<input type="number" id="total-expense"><br><br>
+		<label>Add Friend</label>
+		<input type="text" id="new-friend">
+		<button onclick="addFriend()">Add Friend</button>
+		<ul id="friends-list"></ul>
+		<button onclick="splitExpense()">Split Expense</button>
+		<div id="result"></div>
+	</div>
+</body>
+</html>

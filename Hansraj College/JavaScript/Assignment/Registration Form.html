@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+
+<style>
+
+    input,select
+    {
+        margin: 4px;
+    }
+
+    label 
+    {
+        width: 100px;
+        display: inline-block;
+    }
+  .error
+  {
+    color:red;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+</style>
+
+  <body>
+    <h1>Registration Form</h1>
+    <form id="myForm" action = #>
+      <label for="userid">User ID:</label>
+      <input type="text" id="userid" name="userid">
+      <span id="userError" class="error"></span>
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <span id="nameError" class="error"></span>
+      <br />
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <span id="emailError" class="error"></span>
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <span id="passwordError" class="error"></span>
+      <br />
+      <label for="address">Address:</label>
+	    <input type="text" id="address" name="address">
+      <br>
+      <label for="zipcode">Zip Code:</label>
+      <input type="text" id="zipcode" name="zipcode">
+      <span id="zipError" class="error"></span>      
+      <br>
+      <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="">Please select a country</option>
+          <option value="India">India</option>
+          <option value="Canada">Canada</option>
+          <option value="Mexico">Mexico</option>
+          <option value="USA">United States</option>
+        </select>
+      <span id="countryError" class="error"></span>      
+      <br>
+      <label for="gender">Gender:</label>
+      <input type ="radio" name = "Gender"  id = "gen1" value = "Male">Male
+      <input type ="radio" name = "Gender" value = "Female" id = "gen2">Female
+      <span id="genError" class="error"></span>
+      <br>
+      <label for="lang">Language:</label>
+      <input id = "english" type ="checkbox" name = "lang" value = "English">English
+      <input id = "spanish" type ="checkbox" name = "lang" value = "Hindi" >Hindi
+      <input id = "spanish" type ="checkbox" name = "lang" value = "Spanish" >Spanish
+      <input id = "french" type ="checkbox" name = "lang" value = "French" >French
+      <input id = "german" type ="checkbox" name = "lang" value = "German" >German
+      <span id="lanError" class="error"></span>
+      <br>
+      <br>
+      <label for = "about">About:</label>
+      <textarea rows = 4 columns = 15 id = "about"></textarea>
+      <br>
+      <br>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    const form = document.getElementById("myForm");
+    const userid = document.getElementById("userid");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const zipcode = document.getElementById("zipcode");
+    const country = document.getElementById("country");
+    const gen = document.getElementsByName("Gender");
+    const lang = document.getElementsByName("lang");
+
+    const nameError = document.getElementById("nameError");
+    const usererror = document.getElementById("usererror");
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+    const zipError = document.getElementById("zipError");
+    const countryError = document.getElementById("countryError");
+    const genError = document.getElementById("genError");
+    const langError = document.getElementById("lanError");
+    
+
+    form.addEventListener("submit", function (event) 
+    {
+      event.preventDefault();
+      let userValue = userid.value.trim();
+      let nameValue = name.value.trim();
+      let emailValue = email.value.trim();
+      let passwordValue = password.value.trim();
+      let zipValue = zipcode.value.trim();
+      let countryValue = country.value.trim();
+
+      let genValue = "";
+        for(i = 0; i < gen.length; i++) {
+            if(gen[i].checked){
+            genValue = gen[i].value;
+            }
+        }
+
+
+
+        let langValue = "";
+        const lang = document.getElementsByName("lang");
+        let len = lang.length;
+        for (var i=0; i<len; i++)
+        {
+            if(lang[i].checked)
+            {
+                langValue = langValue + " " + lang[i].value;
+            };
+        }
+
+
+      // Validations Start
+
+      if (userValue === "") 
+      {
+        userError.textContent = "UserID is required.";
+      } 
+      else if (userValue.length < 5 || userValue.length > 12) 
+      {
+        userError.textContent = " UserID must be of length 5 to 12.";
+      }
+      else 
+      {
+        userError.textContent = "";
+      }
+
+      if (nameValue === "") 
+      {
+        nameError.textContent = "Name is required.";
+      }
+      else if (!isValidName(name))
+      {
+        nameError.textContent = "Name must be alphabets only."
+      } 
+      else 
+      {
+        nameError.textContent = "";
+      }
+
+      // validate email field
+      if (emailValue === "") 
+      {
+        emailError.textContent = "Email is required.";
+      } 
+      else if (!isValidEmail(emailValue)) 
+      {
+        emailError.textContent = "Please enter a valid email address.";
+      } 
+      else 
+      {
+        emailError.textContent = "";
+      }
+
+      // validate password field
+      if (passwordValue === "") 
+      {
+        passwordError.textContent = "Password is required.";
+      } 
+      else if (passwordValue.length < 7 || passwordValue.length >12) 
+      {
+        passwordError.textContent = "Password must be of length 7 to 12.";
+      } 
+      else 
+      {
+        passwordError.textContent = "";
+      }
+
+      if (zipValue === "") 
+      {
+        zipError.textContent = "ZIP Code is required.";
+      } 
+      else if (!isValidZIP(zipValue)) 
+      {
+        zipError.textContent = "Must be numeric only.";
+      } 
+      else 
+      {
+        zipError.textContent = "";
+      }
+
+      if(countryValue === "")
+      {
+        countryError.textContent = "Required."
+      }
+      else
+      {
+        countryError.textContent = "";
+      }
+
+      if(genValue === "")
+        {
+            genError.textContent = "Gender is required";
+        }
+        else
+        {
+            genError.textContent = ""
+        }
+
+
+        //validate language
+        if(langValue==="")
+        {
+            langError.textContent = "Language is required";
+        }
+        else
+        {
+            langError.textContent = "";
+        }
+      
+
+  
+
+      // check if all fields are valid
+      if (userError.textContent === "" && nameError.textContent === "" && emailError.textContent === "" && passwordError.textContent === "" && zipError.textContent === "" && countryError.textContent === "" && genError.textContent === "" && lanError.textContent === "" ) 
+      {
+        form.submit();
+      }
+    });
+
+    function isValidEmail(email) 
+    {
+      // basic email validation using regular expression
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailPattern.test(email);
+    }
+
+    function isValidName(name)
+    {
+        const namePattern = /^[a-zA-Z]+$/;
+        return name.value.match(namePattern);
+    }
+
+    function isValidZIP(zipcode)
+    {
+        const zipPattern = /^\d+$/;
+        return zipPattern.test(zipcode);
+    }
+  </script>
+</html>

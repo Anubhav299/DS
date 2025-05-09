@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping List</title>
+	<script>
+		window.onload = function() 
+    	{
+			// Get the form and the list
+			var form = document.getElementById("itemForm");
+			var list = document.getElementById("itemList");
+
+			// Add an event listener to the form's submit button
+			form.addEventListener("submit", function(event) 
+      		{
+				event.preventDefault(); // Prevent the form from submitting
+
+				// Get the value of the input field
+				var newItem = document.getElementById("newItem").value;
+
+				// Create a new list item and add it to the list
+				var listItem = document.createElement("li");
+				listItem.innerText = newItem;
+
+				// Create a remove button for the list item
+				var removeButton = document.createElement("button");
+				removeButton.innerText = "Remove";
+				removeButton.addEventListener("click", function() 
+				{
+					list.removeChild(listItem);
+				});
+
+				// Add the remove button to the list item
+				listItem.appendChild(removeButton);
+
+				// Add the list item to the list
+				list.appendChild(listItem);
+
+				// Reset the input field
+				document.getElementById("newItem").value = "";
+			});
+		}
+	</script>
+</head>
+<body>
+	<h1>Shopping List</h1>
+	<form id="itemForm">
+		<label for="newItem">New Item:</label>
+		<input type="text" id="newItem" name="newItem">
+		<input type="submit" value="Add">
+	</form>
+	<ul id="itemList"></ul>
+</body>
+</html>

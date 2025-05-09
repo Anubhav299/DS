@@ -1,0 +1,83 @@
+************************************* Invoked: Sat Jul 30 14:36:44 2022
+[0] Arguments: C:\Users\asus\Downloads\msys2-x86_64-20220603.exe
+[32] Operations sanity check succeeded.
+[111] Language: en-US
+[112] Warning: QMimeDatabase: Error loading internal MIME data
+An error has been encountered at line 1 of <internal MIME data>: Premature end of document.:
+[5647] Loaded control script ":/metadata/installer-config/control_js.js"
+[5647] Using control script: ":/metadata/installer-config/control_js.js"
+[8388] Preparing meta information download...
+[17736] OverwriteTargetDirectory : Warning : You have selected an existing, non-empty directory for installation.
+Note that it will be completely wiped on uninstallation of this application.
+It is not advisable to install into this directory as installation might fail.
+Do you want to continue? Yes|No
+[68729] backup  operation: Mkdir
+[68729] 	- arguments: S:/MINGW
+[68729] Done
+[68730] perform  operation: Mkdir
+[68730] 	- arguments: S:/MINGW
+[68730] Done
+[68731] Preparing the installation...
+[68731] Install size: 2 components
+[68808] Installing component MSYS2 64bit base
+[68808] backup com.msys2.root.base operation: Extract
+[68808] 	- arguments: installer://com.msys2.root.base/20220603msys64.7z, S:/MINGW
+[68808] Done
+[68808] perform com.msys2.root.base operation: Extract
+[68808] 	- arguments: installer://com.msys2.root.base/20220603msys64.7z, S:/MINGW
+[92691] Done
+[92691] backup com.msys2.root.base operation: CreateShortcut
+[92691] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MinGW x86.lnk, -mingw32, iconPath=S:/MINGW/mingw32.exe
+[92692] Done
+[92692] perform com.msys2.root.base operation: CreateShortcut
+[92692] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MinGW x86.lnk, -mingw32
+[92744] Done
+[92744] backup com.msys2.root.base operation: CreateShortcut
+[92744] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MinGW x64.lnk, -mingw64, iconPath=S:/MINGW/mingw64.exe
+[92744] Done
+[92745] perform com.msys2.root.base operation: CreateShortcut
+[92745] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MinGW x64.lnk, -mingw64
+[92753] Done
+[92753] backup com.msys2.root.base operation: CreateShortcut
+[92753] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MinGW UCRT x64.lnk, -ucrt64, iconPath=S:/MINGW/ucrt64.exe
+[92753] Done
+[92754] perform com.msys2.root.base operation: CreateShortcut
+[92754] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MinGW UCRT x64.lnk, -ucrt64
+[92762] Done
+[92762] backup com.msys2.root.base operation: CreateShortcut
+[92762] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MinGW Clang x64.lnk, -clang64, iconPath=S:/MINGW/clang64.exe
+[92762] Done
+[92763] perform com.msys2.root.base operation: CreateShortcut
+[92763] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MinGW Clang x64.lnk, -clang64
+[92770] Done
+[92770] backup com.msys2.root.base operation: CreateShortcut
+[92770] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MSYS.lnk, -msys, iconPath=S:/MINGW/msys2.exe
+[92770] Done
+[92770] perform com.msys2.root.base operation: CreateShortcut
+[92770] 	- arguments: S:/MINGW\msys2_shell.cmd, C:\Users\asus\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2 64bit/MSYS2 MSYS.lnk, -msys
+[92778] Done
+[92779] backup com.msys2.root.base operation: Execute
+[92779] 	- arguments: S:/MINGW\usr\bin\bash.exe, --login, -c, exit
+[92779] Done
+[92779] perform com.msys2.root.base operation: Execute
+[92779] 	- arguments: S:/MINGW\usr\bin\bash.exe, --login, -c, exit
+[92947] S:/MINGW\\usr\\bin\\bash.exe" started, arguments: "--login -c exit
+[95581] Copying skeleton files.\nThese files are for the users to personalise their msys2 experience.\n\nThey will never be overwritten nor automatically updated.\n\n'./.bashrc' -> '/home/asus/.bashrc'\n'./.bash_logout' -> '/home/asus/.bash_logout'\n'./.bash_profile' -> '/home/asus/.bash_profile'\n'./.inputrc' -> '/home/asus/.inputrc'\n'./.profile' -> '/home/asus/.profile'\n
+[95651] 'C:\\Windows\\system32\\drivers\\etc\\hosts' -> '/etc/hosts'\n
+[95803] 'C:\\Windows\\system32\\drivers\\etc\\protocol' -> '/etc/protocols'\n
+[95833] 'C:\\Windows\\system32\\drivers\\etc\\services' -> '/etc/services'\n
+[95983] 'C:\\Windows\\system32\\drivers\\etc\\networks' -> '/etc/networks'\n
+[97563] ==> Generating pacman master key. This may take some time.\n
+[99204] ==> Updating trust database...\n
+[99354] ==> Appending keys from msys2.gpg...\n
+[100985] ==> Locally signing trusted keys in keyring...\n
+[102117]   -> Locally signed 5 keys.\n==> Importing owner trust values...\n==> Disabling revoked keys in keyring...\n
+[102268]   -> Disabled 3 keys.\n==> Updating trust database...\n
+[128949] \x1B[H\x1B[2J\x1B[3J\n\n###################################################################\n#                                                                 #\n#                                                                 #\n#                   C   A   U   T   I   O   N                     #\n#                                                                 #\n#                  This is first start of MSYS2.                  #\n#       You MUST restart shell to apply necessary actions.        #\n#                                                                 #\n#                                                                 #\n###################################################################\n\n\n\x1B[H\x1B[2J\x1B[3J
+[128950] Done
+[129207] Writing maintenance tool: "S:/MINGW/uninstall.exe.new"
+[129207] Writing maintenance tool.
+[130357] Wrote permissions for maintenance tool.
+[130567] Maintenance tool hard restart: false.
+[130602] Installation finished!
+[159075] starting "S:/MINGW/msys2_shell.cmd" ()

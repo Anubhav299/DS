@@ -1,0 +1,29 @@
+<!-- 2. Write a program that takes in a number from the user and checks if it is even or odd. Print out "Even" if the number is even, and "Odd" if it is odd. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <label for="num">Enter number : </label>
+    <input type="number" id="numb">
+    <button onclick="check()">Print</button>
+    <p id="result"></p>
+    <script>
+        function check()
+        {
+            const numb = document.getElementById("numb").value;
+            if(numb % 2 == 0)
+            {
+                document.getElementById("result").innerText = `${numb} is even.`;
+            }
+            else
+                document.getElementById("result").innerText = `${numb} is odd.`;
+        }
+    </script>
+</body>
+</html>

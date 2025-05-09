@@ -1,0 +1,137 @@
+<html>
+<header>
+    <title>Admission Form</title>
+
+
+    </head>
+    <header>
+        <img src="St.George's College.jfif" alt="Town Hall Logo" width=150 align="right">
+        <center>
+            <u>
+                <h1>Admission Form</h1>
+            </u>
+        </center>
+    </header>
+
+    <!-- <style>
+        body {
+            font-family: sans-serif;
+            font-size: 100%;
+            margin-left: 2em;
+            background-color: #FFFFCC;
+        }
+        
+    </style> -->
+
+    <body>
+        <form action="Hello.html" target="_blank" method="get">
+            <h1>
+                <u>
+                </u>
+            </h1>
+            <b>Name : </b>
+            <input type="text" placeholder="First Name" name="fname" id="fnID" autofocus required>
+            <input type="text" placeholder="Middle Name" name="mname" id="mnID">
+            <input type="text" placeholder="Last Name" name="lname" id="lnID">
+            <br>
+            <b>Gender : </b>
+
+            <input type="radio" name="Gender" id="gen">Male
+            <input type="radio" name="Gender" id="gen">Female
+            <input type="radio" name="Gender" id="gen">Others
+            <input type="radio" name="Gender" id="gen">Rather not say
+            <br>
+            <b> E-mail : </b>
+            <input type="text" name="mail" id="mail" placeholder="myname@example.com">
+            <br>
+            <b> D.O.B :</b>
+            <input type="date" name="dob" id="dob" required>
+            <br>
+            <b>Mobile No.</b>
+            <input type="tel" name="tele" id="tele" maxlength="14" value="+91-">
+            <br>
+            <b>Father's/Guardian's Name : </b>
+            <input type="text" placeholder="First Name" name="fname" id="fnID" autofocus required>
+            <input type="text" placeholder="Middle Name" name="mname" id="mnID">
+            <input type="text" placeholder="Last Name" name="lname" id="lnID">
+            <br>
+            <b>Permanent Address : </b>
+            <input type="text" name="add." id="add." placeholder="Enter Complete Address">
+            <br>
+            <b>Present Address : </b>
+            <input type="text" name="addr." id="addr." placeholder="Enter Complete Address">
+            <br>
+            <b>Hometown : </b>
+            <input type="text" name="hc" id="hc">
+            <b>Nationality : </b>
+            <input type="text" name="nt" id="nt">
+            <br>
+            <b>Percentage in 10th Boards Exam</b>
+            <input type="text" name="perc" id="perc" placeholder="%">
+            <br>
+            <b>Were you ever suspended in your previous school ?*</b>
+            <input type="radio" name="yes" id="yes"> Yes
+            <input type="radio" name="no" id="no"> No
+            <br>
+            <b>*If yes, why ?</b>
+            <textarea name="comments" rows="5" cols="50">
+            </textarea>
+            <br>
+            <label for="Select Religion"><b>Religion : </b></label>
+            <select name="SS" id="SS">
+                <option value="none" selected disabled hidden>Select Religion</option>
+                <option value="Hinduism">Hinduism</option>
+                <option value="Buddhism">Buddhism</option>
+                <option value="Sikhism">Sikhism</option>
+                <option value="Jainism">Jainism</option>
+                <option value="Christianity">Christianity</option>
+                <option value="Islam">Islam</option>
+                <option value="Atheist">Atheist</option>
+                <option value="Other">Other</option>
+                <option value="Rather not say">Rather not say</option>
+            </select>
+
+            <h3><b><u>Areas of Interest</u> :</b></h3>
+            <b> Sports : </b>
+            <input type="checkbox" name="Cric" id="Cric">Cricket
+            <input type="checkbox" name="Footb" id="Footb">Football
+            <input type="checkbox" name="Baskb" id="Baskb">Basketball
+            <input type="checkbox" name="Oth" id="Oth">Others
+            <br>
+            <b> Genres of Book : </b>
+            <input type="checkbox" name="Fic" id="Fi">Fiction
+            <input type="checkbox" name="Sci-Fi" id="Fi">Sci-Fi
+            <input type="checkbox" name="Thriller" id="Th">Thriller
+            <input type="checkbox" name="Fiction" id="Tr">Tragedy
+            <input type="checkbox" name="Non-Fic" id="Fi">Non-Fiction
+            <input type="checkbox" name="Oth" id="Oth">Others
+
+            <br>
+            <label for="Select Stream"><b>Subjects:</b></label>
+            <select name="SS" id="SS">
+                <option value="none" selected disabled hidden>Select Stream</option>
+                <optgroup label="Science">
+                    <option value="PCM with Computer Science">PCM with Computer Science</option>
+                    <option value="PCM with Physical Education">PCM with Physical Education</option>
+                    <option value="PCM with Hindi">PCM with Hindi</option>
+                    <option value="PCMB">PCMB</option>
+                    <option value="PCB with Hindi">PCB with Hindi</option>
+                    <option value="PCB with Biotech.">PCB with Biotech</option>
+                </optgroup>
+                <optgroup label="Commerce">
+                    <option value="Commerce with Maths">Commerce with Maths</option>
+                    <option value="Commerce with Hindi">Commerce with Hindi</option>
+                    <option value="Commerce with Computer Science">Commerce with Computer Science</option>
+                </optgroup>
+            </select>
+
+            <br>
+            <br>
+            <center>
+                <button type="submit" style="height: 25px;width: 100px">Upload Image</button>
+                <button type="reset" style="height: 25px;width: 100px">Reset</button>
+            </center>
+        </form>
+    </body>
+
+</html>

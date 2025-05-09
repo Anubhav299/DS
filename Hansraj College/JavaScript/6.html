@@ -1,0 +1,28 @@
+<!-- 6.	Write a program that uses an if/else statement to check if a user's password is correct. If the password matches "1234", print out "Access granted", otherwise print out "Access denied" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+</head>
+<body>
+    <label for="num">Enter the Password</label>
+    <input type="text" id="num">
+    <button onclick="check()">Log In</button>
+    <p id="result"></p>
+
+    <script>
+        function check()
+        {
+            const num = document.getElementById("num").value;
+            if(num == '1234')
+            {
+                document.getElementById("result").innerText
+            }
+        }
+    </script>
+</body>
+</html>

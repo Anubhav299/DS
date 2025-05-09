@@ -1,0 +1,28 @@
+<!-- 7.	Write a function that takes in an array of numbers and returns the sum of all the numbers in the array. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+</head>
+<body>
+    <p id="result"></p>
+    <button onclick="check()">Check</button>
+    <script>
+        function check()
+        {
+            var numbers = [2,4,6];
+            let a = 0;
+            for(let number of numbers)
+            {
+                a+=number;
+            }
+            document.getElementById('result').innerHTML=a;
+        }
+    </script>
+</body>
+</html>

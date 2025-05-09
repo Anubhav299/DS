@@ -1,0 +1,179 @@
+header{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 120px;
+  width: 1500px;
+  font-size: 5em;
+  text-align: center;
+  padding-top: 1px;
+}
+
+header.img{
+  float:left;
+}
+
+h3
+{
+  margin-top: 0.2em;
+  height: 30%;
+}
+
+
+h3:hover
+{
+  text-shadow:2px,2px,#ee8c15;
+}
+/* .container
+{
+  text-align: center;
+}
+.container span
+{
+
+} */
+
+#title
+{
+  color:rgb(50, 207, 146);
+  font-size: 100%;
+  font-family: Thickboy system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+#tagline
+{
+  color:#fcd421;
+  font-size: medium;
+}
+
+main{
+  padding-top: 4em;
+}
+
+#line{
+  color: rgba(237, 196, 11, 0.924);
+  padding-top: 2em;
+}
+
+main.h3:hover{
+  color: #ffffff3f;
+
+}
+
+
+option
+{
+  text-indent: 5px; 
+  margin-right: 10em;
+  padding-top: 0.4em;
+}
+
+#topic
+{
+  font-size: 140%;
+  color: #000000;
+}
+
+
+#upload
+{
+  height:40%;
+  width:90%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+    position: relative;
+  }
+
+main.img:hover
+{
+  width: 200px;
+  height:80px;
+
+}
+
+
+form.img{
+  border: 5px solid #555;
+
+}
+
+label 
+{
+  float: left;
+  width: Sem; 
+  text-align: right;}
+
+
+
+th, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+textarea { 
+  height: Sem; 
+  width: 25em; 
+  font-family: Arial, Helvetica, sans-serif; }
+
+.up
+{
+  background-color: #ffa616;
+  width: 99%;
+  height:2%;
+  border-style: solid;
+  
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+
+#hours
+{
+  text-align: right; 
+}
+
+footer
+{
+  background-color: #ffffff;
+  height: 5em;
+  width:100%;
+}
+
+
+#footer 
+{
+  float:left;
+}
+
+footer p{
+  padding-top: 2.5em;
+  text-align: right;
+  font-weight: 300;
+  font-size: 120%;
+  padding-left: 50%;
+}
+
+
+a.print_link
+{
+  text-align: right;
+  display:inline-flex;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #B95D6A;
+  color: #ffffff;
+  border: 1px solid #b95d6a;
+  transition: all 0.2s ease-in-out;
+}
+ 
+a.print_link:hover {
+    background-color: #ffffff;
+    color: #b95d6a;
+}

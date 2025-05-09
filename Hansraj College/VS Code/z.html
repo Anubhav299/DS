@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel = "stylesheet" href = "new.css">
+    <link rel="icon" type="image/x-icon" href="logo4.ico">
+
+
+    
+    <!-- JAVASCRIPT -->
+    <script>
+        function ddlselect(val)
+        {
+            
+                var d = document.getElementById("ddselect");  
+                var displaytext = d.options[d.selectedIndex].text;
+                document.getElementById("textvalue2").value= displaytext; 
+                var c = document.getElementById("ddselect");  
+                var displaytext = c.options[c.selectedIndex].text;
+                document.getElementById("textvalue").value= displaytext; 
+        }
+      
+        var loadFile = function(event) 
+        {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
+    </script>
+
+
+
+</head>
+<body background="pic5.jpeg">
+    <header>
+        <img src = "logo6.png"  height=180px width = 190px align = "left">
+        <!-- <div class = "container">
+            <span class = "text1">PIE BRAIN COURSES</span>
+            <span class = "text2">Sharper your brains</span></div> -->
+        <h3 id = "title">PIE BRAINS COURSES</h3>
+        <p id = "tagline" style="font-size:30%; font-family: Weise;">Sharpen your brains....</p>
+        <hr class = "up">
+    </header>
+
+    <main>
+        <center>
+        <br>
+        <h1></h1>
+        <h3 style="color:white; font-size:24px ;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" id = "Register">Registration form for Online Course</h3>
+        </center>
+        <form action = "redirect.html" method = "get" target = "_blank">
+            <center>
+            <table background = "pic3.png" height = 80% width = 60% font-size = 40   padding-top = 10px style = "font-family: Arial, Helvetica, sans-serif; width : 27cm">
+            <tbody>
+                    <tr>
+                        <td><b><U id = "topic">PERSONAL INFORMATION</b></U></td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <label for="firstname"><u>F</u>irst name:</label>
+                            <input type = "text" name = " First name" id = "First name" accesskey = "F" autofocus required placeholder="First Name"></td>
+                        <td></td>
+                        <td>
+                            <label for="lastname"><u>L</u>ast name:</label>
+                            <input type = "text" placeholder="Last Name" name = "Last name" id = "Last name" accesskey="L"></td>
+                    </tr>
+                    <tr>
+                        <td>Father's Name: <input type = "text" name = "Father name" id = "Father name" placeholder = "Father's Name"></td>
+                        <td></td>
+                        <td>Mother's Name :<input type = "text" name = "Mother name" id = "Mother name" placeholder = "Mother's Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth: <input type = "date"></td>
+                        <td></td>
+                        <td>Gender: <input type = radio name = "gender" id = "gender"> Female <input type = radio name = "gender" id = "gender"> Male </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for= "age">Age: </label> 
+                            <input type="range" name="age" id="age" 
+                            min="14" max="50" step="l" onchange="updateTextInput(this.value);">
+                            <input type="text" id="textInput" value="" size = "3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email id: <input type = "email" placehoder = "Mail" required id = "link" list = "links">
+                            <datalist id="links">
+                                <option value="@google.com/" label="Google"> 
+                                <option value="@yahoo.com/" label="Yahoo"> 
+                                <option value="@outlook.com/" label="Outlook"> 
+                                </datalist>
+                        </td>
+                        <td></td>
+                        <td>Contact :<input type = "text" maxlength="14" autofocus = "autofocus" value="+91-" required></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address:
+                            <input type = "text" name = "address" required title = "Please specify city--state--country" placeholder = "Address">
+                        </td>
+                        <td></td>
+                        <td>
+                            Zip code: <input type="text" name="zip" required 
+                            pattern=" \d{S}{[\-]\d{4})?" 
+                            title="Must be 99999 or 99999-9999" placeholder="Zip Code"><br> 
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td><b><U id = "topic">COURSE INFORMATION</b></U></td>
+                    </tr>
+                    <tr>
+                        <td>Course Batch:
+                            <select name = "Batch" aria-placeholder="Select" >
+                                <option value = "Select" selected>--Select--</option>
+                                <optgroup label = "September batch">
+                                    <option value = "10 sep">10 September</option>
+                                    <option value = "25 sep">25 September</option>
+                                </optgroup>
+                                <optgroup label = "October batch">
+                                    <option value = "5 oct">5 October</option>
+                                    <option value = "20 oct">20 October</option>
+                                </optgroup>
+                        </select></td>
+                    <td></td>
+                    <td>Mode of lectures: 
+                        <select name="lectures" value = "select">
+                        <option value = "Live">Live classes</option>
+                        <option value = "Recorded">Recorded</option>
+                        <option value = "Both">Both</option>
+                        
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>
+                        Courses Offered:
+                        <select name="Topic" size="5" style="width:60%;" id = "ddselect" onchange = "ddlselect(this.value)"> 
+                            <option value = "add" name="ch"><b>ADD+</b></option>  
+                            <option value = "Machine Learning" name="ch" id = "ml"> MACHINE LEARNING</option> 
+                            <label for="ml">MACHINE LEARNING</label> 
+                            <option value = "Data Science" id = "ds" name="ch"> DATA SCIENCE</option> 
+                            <label for="ds">Data Science</label>
+                            <option value = "Marketing" id = "market" name="ch"> DIGITAL MARKETING</option>
+                            <label for="market">Digital Marketing</label> 
+                            <option value = "Web Development" id = "wd" name="ch"> WEB DEVELOPMENT</option>
+                            <label for="wd">Web Development</label>
+                            <option value = "Python" id = "python" name="ch">PYTHON</option>
+                            <label for="python">PYTHON</label>
+                            <option value = "PHP" id = "php" name="ch">PHP</option>
+                            <label for="php">php</label>
+                        </select> 
+                    </td>
+                    <td></td>
+                    <td>
+                        Selected Course: (any 2)
+                       <ol>
+                            <li><input type = "text" id = "textvalue" ></li>
+                            <br>
+                            <li><input type = "text" id = "textvalue2" ></li>  
+                       </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for= "Hours ">Hours you can give ?</label> 
+ 
+                        <input type="number" name="hours" id="hours" min="3" max="10" step="1" value="3" size = "1" ><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b><U id = "topic">EDUCATIONAL DETAILS</b></U></td>
+                </tr>
+                <tr>
+                    <td>
+                        Currently Pursuing:
+                        <input type = "text" name = "current" required novalidate>
+                    </td>
+                    <td></td>
+                    <td>
+                        Institute/ School Code:
+                        <input 
+                        name ="Institute" pattern="^\d{4}-\d{4}$" Placeholder = "xxxx-xxxx" maxlength = 9 required >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Highest Qualification:
+                        <select name="Qualification" value = "Qua" id = "Qua" required>
+                        <option value = "PG">Post Graduate</option>
+                        <option value = "G">Graduate</option>
+                        <option value = "UG">UnderGraduate</option>
+                        <option value = "Inter">Intermediate</option>
+                        <option value = "Matr">Matriculation</option>
+                    </td>
+                    <td></td>
+                    <td>
+                        Attach a valid proof:<br> 
+                        <!-- <input type="file" name="fileupload" accept="application/pdf, image/gif" required> -->
+                        <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                        <p><img id="output" width="200" style = "border: 10px solid #555;"/></p>
+                        <label for="file" style="cursor: pointer;"><B>
+                            <img src = "upload2.png" id = "upload"></label>
+                        
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><b><U id = "topic">OTHER</b></U></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            How did you know about course ?
+                            <br>
+                            <input type = "checkbox" name = "Youtube" id = "yt">Youtube
+                            <br>
+                            <input type = "checkbox" name = "Instagram" id = "ins">Instagram
+                            <br>
+                            <input type = "checkbox" name = "College" id = "clg">College
+                            <br>
+                            <input type = "checkbox" name = "Friends" id = "friends">Friends
+                            <br>
+                            <input type = "checkbox" name = "Others" id = "other">Other
+                            <br>
+                            <input type ="text" name = "other" placehoder = "Write source">
+                        </td>
+                    </tr>
+                        <td colspan="3">
+                            <input type= "checkbox" required>
+                            By signing below, I acknowledgment the agreement stated in this form. I also confirmed that all information I entered in this form is true and accurate.
+                        </td>
+                       
+                         
+
+                    <tr>
+                        <td></td>
+                        <td><input type="image" src="submit2..png" alt="Submit button" height = "60">
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr align = center>
+                        <td></td>
+                        <td><input type = "reset" id = "reset" name = "reset" src ="reset2.png" >
+                            <!-- <input type="image" src="reset2.png" alt="Reset button" height = "30" id = "reset" name = "reset">  -->
+                        </td>
+                        <td></td>
+                    </tr>
+            </tbody>
+            </table>
+            <p style = "font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color :white">
+            Suggestions:</p><textarea name = "textarea" placeholder="Write Something" rows = 3 columns  = 200></textarea>
+            </p>
+            <center><a class="print_link" href="#" onClick="window.print()">Print this page</a></center>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            
+        </center> 
+        <!-- <hr class = "up"> -->
+    </main>  
+    <footer>
+        <img src="footer.png" height = 100% width = 20%  id = "footer"> 
+        <p><em><b>Contact us by phone</em></b>: 04155-24578</p>
+        
+    </form>
+    </footer>
+        
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- 
+Left elements
+1. access keys
+2. Label alignment
+3. Tab Index
+4. Regular expression
+5. Footer contacts + print page +  -->
+
+<!-- Doubts
+1.to increase selectivity of label in dropdown list 
+2. Image reset button
+3. Upload file of specific size and display in another tab 
+4. Fieldset in table
+5. Why not footer.img-->

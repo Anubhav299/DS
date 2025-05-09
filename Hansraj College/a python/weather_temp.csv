@@ -1,0 +1,16 @@
+﻿Outlook,Temperature,Humidity,Wind,Play
+Rainy,27,NULL,NULL,No
+Rainy,37,90,Yes,No
+Overcast,40,86,No,Yes
+Sunny,25,96,No,Yes
+Sunny,17,80,No,Yes
+Sunny,18,70,Yes,No
+Overcast,18,65,Yes,Yes
+Rainy,23,95,No,No
+Rainy,18,NULL,No,Yes
+Sunny,24,80,No,Yes
+Rainy,26,70,Yes,Yes
+Overcast,25,90,Yes,Yes
+Overcast,36,75,No,Yes
+Sunny,26,91,Yes,No
+Rainy,NULL,70,Yes,Yes

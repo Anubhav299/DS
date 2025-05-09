@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form CSS</title>
+</head>
+<header>
+    <header>
+        <img src="St.George's College.jfif" alt="St.George's College" align="right" vertical-align="middle">
+        <img src="St.George's College.jfif" alt="St.George's College" align="left" vertical-align="middle">
+        <center>
+            <h1>St. George's College Unit - II</h1>
+            <h3>Press Onwards</h3>
+            <h2>Bagh Muzaffar Khan, Agra, Uttar Pradesh, India 282002</h2>
+            <h3>An English Medium School Based On ICSE Curriculum</h3>
+        </center>
+    </header>
+
+    <style>
+        marquee {
+            border: 2px solid black;
+            border-radius: 4px;
+            color: aliceblue;
+            background-color: rgb(148, 147, 147);
+        }
+
+        main {
+            padding-top: 14px;
+            padding-bottom: -5px;
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+
+        body {
+            vertical-align: middle;
+            text-align: justify;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 100%;
+            border-style: hidden;
+            border-left: 20ex;
+            padding-left: 7ex;
+            padding-top: 7ex;
+            padding-right: 7ex;
+            background-color: rgb(200, 230, 239);
+        }
+
+        header {
+            padding-bottom: -2ex;
+            border-style: solid;
+            border-bottom: 0.5ex solid black;
+            border-collapse: separate;
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            font: normal;
+            font-size: 300%;
+            color: rgb(10, 9, 9);
+        }
+
+        h2 {
+            font-size: 170%;
+        }
+
+        h3 {
+            font-size: 125%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        img {
+            margin-top: -2px;
+            margin-right: -2px;
+            margin-left: -2px;
+            height: 281px   ;
+            width: 260px;
+            border: 2px ridge black;
+        }
+
+        table 
+        {
+            border: lpx solid black;
+            border-collapse: collapse;
+        }
+
+        th,td {
+            border: lpx solid black;
+            padding: .2em .7em;
+            text-align: right;
+        }
+
+        th.left,td.left {
+            text-align: left;
+        }
+
+        tfoot {
+            font-weight: bold;
+        }
+
+        .button #reset {
+            box-shadow: 2px 2px 0 wheat;
+            background-color: silver;
+        }
+
+        #button {
+            margin-left: 9.5em;
+        }
+
+        legend
+        {
+            font-size: x-large;
+        }
+
+        .field_set {
+            border: solid;
+        }
+
+        label
+        {
+            width: 120px;
+            display: inline-block;
+
+        }
+    </style>
+    <form action="Hello.html" target="_blank" method="get">
+        <marquee>
+            <b>Last date to submit the form is 20th September 2022 till 1700 hrs.</b>
+        </marquee>
+        <main>
+            <fieldset class="field_set">
+                <legend><b> Form Details </b></legend>
+                <b>Local Date and Time of Submission :&nbsp;</b>
+                <input type="datetime-local" name="datetime">
+                <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label></label><b>Form No.&nbsp;</b>
+                <input type="tel" name="formno." maxlength="10"><br><br>
+
+
+            </fieldset>
+            <br>
+
+            <fieldset class="field_set">
+                <legend><b>Personal Information</b></legend>
+                <label><b>Name : </b></label>
+                <input type="text" placeholder="First Name" name="fname" id="fnID" autofocus required>
+                <input type="text" placeholder="Middle Name" name="mname" id="mnID">
+                <input type="text" placeholder="Last Name" name="lname" id="lnID">
+                <br>
+                <br>
+                <label><b>Gender :</b></label>
+                <input type="radio" name="Gender" id="gen">Male
+                <input type="radio" name="Gender" id="gen">Female
+                <input type="radio" name="Gender" id="gen">Others
+                <input type="radio" name="Gender" id="gen">Rather not say
+                <br>
+                <br>
+
+                <label><b>E-mail :</b></label>
+                <input type="email" name="mail" id="mail" placeholder="myname@example.com" text-align="left">
+                <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b>
+                <b> D.O.B :</b>
+                <input type="date" name="dob" id="dob" required text-align="right">
+                <br>
+                <br>
+
+                <label><b>Mobile No.</b></label>
+                <input type="tel" name="tele" id="tele" maxlength="14" value="+91-">
+                <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b>
+                <b>Religion:</b>
+                <select>
+                    <option value="none" selected disabled hidden>Select Religion</option>
+                    <option value="Hinduism">Hinduism</option>
+                    <option value="Buddhism">Buddhism</option>
+                    <option value="Sikhism">Sikhism</option>
+                    <option value="Jainism">Jainism</option>
+                    <option value="Christianity">Christianity</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Atheist">Atheist</option>
+                    <option value="Other">Other</option>
+                    <option value="Rather not say">Rather not say</option>
+                </select>
+                <br>
+                <br>
+
+                <label><b>Father's/Guardian's Name : </b></label>
+                <input type="text" placeholder="First Name" name="fname" id="fnID" required>
+                <input type="text" placeholder="Middle Name" name="mname" id="mnID">
+                <input type="text" placeholder="Last Name" name="lname" id="lnID">
+                <br>
+                <br>
+                
+                <label><b>Highest Qualification :</b></label>
+                <select>
+                    <option value="none" selected disabled hidden>Select Qualification</option>
+                    <option value="None">None</option>
+                    <option value="Lower Secondary School">Lower Secondary School</option>
+                    <option value="Secondary School Diploma">Secondary School Diploma</option>
+                    <option value="Bachelors Degree">Bachelors Degree</option>
+                    <option value="Masters Degree">Masters Degree</option>
+                    <option value="Doctoral Degree">Doctoral Degree</option>
+                </select>
+                <b>&emsp;&emsp;&emsp;&emsp;</b>
+                <b>Occupation :</b>
+                <input type="text" name="Occu" id="Occu">
+                <br>
+                <br>
+                <label><b>Mother's Name : </b></label>
+                <input type="text" placeholder="First Name" name="fname" id="fnID" required>
+                <input type="text" placeholder="Middle Name" name="mname" id="mnID">
+                <input type="text" placeholder="Last Name" name="lname" id="lnID">
+                <br>
+                <br>
+                <label><b>Highest Qualification :</b></label>
+                <select>
+                    <option value="none" selected disabled hidden>Select Qualification</option>
+                    <option value="None">None</option>
+                    <option value="Lower Secondary School">Lower Secondary School</option>
+                    <option value="Secondary School Diploma">Secondary School Diploma</option>
+                    <option value="Bachelors Degree">Bachelors Degree</option>
+                    <option value="Masters Degree">Masters Degree</option>
+                    <option value="Doctoral Degree">Doctoral Degree</option>
+                </select>
+                <b>&emsp;&emsp;&emsp;&emsp;</b>
+                <b>Occupation :</b>
+                <input type="text" name="Occu" id="Occu">
+            </fieldset>
+
+            <br>
+
+            <fieldset class="field_set">
+                <legend><b>Address</b></legend>
+
+                <b><u>Present Address : </u></b>
+                <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp14;&emsp14;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b>
+                <b><u>Permanent Address : </u></b>
+                <br>
+                <br>
+                <label><b>Street Address :</b></label>
+                <input type="text" name="prstadd." id="prstadd." style="width:38ex; height: 8ex;">
+                <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp14;&emsp14;&emsp14;&emsp14;&emsp;&emsp;&emsp;</b>
+
+                <label><b>Street Address :</b></label>
+                <input type="text" name="prmtadd." id="prmtadd." style="width:38ex; height: 8ex;">
+                <br>
+                <br>
+                <label><b>City :</b></label>
+                <input type="text" name="stadd." id="stadd.">
+                <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp14;&emsp14;&emsp14;&emsp;&emsp;&emsp;</b>
+                <label><b>City :</b></label>
+                <input type="text" name="stadd." id="stadd.">
+                <br>
+                <br>
+                <label><b>Nationality : </b></label>
+                <input type="text" name="prsnt" id="prsnt" >
+                <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp14;&emsp14;&emsp14;&emsp;&emsp;&emsp;</b>
+                <label><b>Nationality : </b></label>
+                <input type="text" name="prmtnt" id="prmtnt" >
+                <br>
+                <br>    
+
+                <label><b>Postal Code : </b></label>
+                <input type="text" name="postal" id="postal" pattern="\d{5}([\-]\d{4})" title="Must be 999999"required>
+                <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp14;&emsp14;&emsp14;&emsp;&emsp;&emsp;</b>
+                <label><b>Postal Code : </b></label>
+                <input type="text" name="postal" id="postal" pattern="\d{5}([\-]\d{4})"  title="Must be 999999"required>
+                
+                    
+                <br>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="field_set">
+                <legend><b>Educational Details</b></legend>
+                <b>Percentage in 10th Boards Exam</b>
+                <input type="text" name="perc" id="perc" placeholder="%">
+                <br>
+                <br>
+
+                <b>Were you ever suspended in your previous school ?*</b>
+                <input type="radio" name="suspended" id="yes"> Yes
+                <input type="radio" name="suspended" id="no"> No
+                <br>
+                <br>
+
+                <b>*If yes, why ?</b>
+                <textarea name="comments" rows="4" cols="50">
+            </textarea>
+            </fieldset>
+
+            <br>
+
+            <fieldset class="field_set">
+                <legend><b>Curricular and Extracurricular Choices</b></legend>
+                
+                <label><b> Sports : </b></label>
+                <input type="checkbox" name="Cric" id="Cric">Cricket
+                <input type="checkbox" name="Footb" id="Footb">Football
+                <input type="checkbox" name="Baskb" id="Baskb">Basketball
+                <input type="checkbox" name="Oth" id="Oth">Others
+                <br>
+                <br>
+
+                <label><b> Genresof Book : </b></label>
+                <input type="checkbox" name="Fic" id="Fi">Fiction
+                <input type="checkbox" name="Sci-Fi" id="Fi">Sci-Fi
+                <input type="checkbox" name="Thriller" id="Th">Thriller
+                <input type="checkbox" name="Fiction" id="Tr">Tragedy
+                <input type="checkbox" name="Non-Fic" id="Fi">Non-Fiction
+                <input type="checkbox" name="Oth" id="Oth">Others
+
+                <br>
+                <br>
+
+                <label><b>Subjects:</b></label>
+                <select name="SS" id="SS">
+                    <option value="none" selected disabled hidden>Select Stream</option>
+                    <optgroup label="Science">
+                        <option value="PCM with Computer Science">PCM with Computer Science</option>
+                        <option value="PCM with Physical Education">PCM with Physical Education</option>
+                        <option value="PCM with Hindi">PCM with Hindi</option>
+                        <option value="PCMB">PCMB</option>
+                        <option value="PCB with Hindi">PCB with Hindi</option>
+                        <option value="PCB with Biotech.">PCB with Biotech</option>
+                    </optgroup>
+                    <optgroup label="Commerce">
+                        <option value="Commerce with Maths">Commerce with Maths</option>
+                        <option value="Commerce with Hindi">Commerce with Hindi</option>
+                        <option value="Commerce with Computer Science">Commerce with Computer Science</option>
+                    </optgroup>
+                </select>
+            </fieldset class="Buttons">
+            <br>
+            <br>
+            <center>
+                <button type="submit" name="button"
+                    style="font-size: medium; height: 40px;width: 150px;box-shadow: 2px 2px 0 rgb(29, 23, 23);background-color: rgb(255, 251, 251);"><b>Submit</b></button>
+                <b>&emsp;&emsp;</b>
+                <button type="reset" name="reset"
+                    style="font-size: medium; height: 40px;width: 150px;box-shadow: 2px 2px 0 rgb(29, 23, 23);background-color: rgb(255, 251, 251);"><b>Reset</b></button>
+            </center>
+            <br>
+            <br>
+        </main>
+
+        <body>
+        </body>
+    </form>
+
+</html>

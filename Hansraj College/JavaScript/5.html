@@ -1,0 +1,42 @@
+<!-- 5.	Write a program that checks if a given string is a palindrome or not (a string that reads the same backwards as forwards). -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question 5</title>
+</head>
+<body>
+  <label for="str">Enter the string:</label>
+  <input type="text" id="str">
+  <button onclick="check()">Check palindrome</button>
+  <p id="result"></p>
+
+  <script>
+    function reverString(str) 
+    {
+        var rev="";
+        for(var i=str.length-1;i>=0;i--)
+        {
+            var s = str.charAt(i);
+            rev+=s;
+        }
+        return rev;
+    }
+
+    function check() 
+    {
+      const n = a = document.getElementById("str").value;
+      const b = reverString(n);
+      document.getElementById("result").innerText = `Reversed String ${b}`;
+      if (b==a) 
+      {
+        document.getElementById("result").innerText = `${n} is palindrome `;
+      } 
+      else 
+      {
+        document.getElementById("result").innerText = `${n} is not palindrome`;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+Pradeep HRC, [06-09-2022 00:03]
+<html>
+ <head>
+<title></title> 
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        position: absolute;
+         right: 24px;
+         top: 20px;
+    }
+    .Submit{
+        border:2px solid gray;
+        background-color: rgb(41, 150, 184);
+        color:white;
+        width:200px;
+        height:50px;
+        padding:15px;
+        border-radius: 25px;
+        font-size: 20px;
+        text-align: center;
+        display:inline block;
+    }
+    .Reset{
+        border:2px solid gray;
+        background-color: rgb(41, 150, 184);
+        color:white;
+        width:200px;
+        height:50px;
+        padding:15px;
+        border-radius: 25px;
+        font-size: 20px;
+    }
+   .textarea{
+    width:150px;
+    height:100px;
+   }
+   .heading{
+    background-color: rgb(86, 132, 218);
+    color: rgb(12, 12, 12);
+
+   }
+
+   
+</style>
+</head>
+<body>
+    <form  action="submit.html" onsubmit="Submitted_successfully">
+<div id="header">
+<p id="name"><h3>NAME:<input type="text" value=" " required autofocus></h3></p>
+<h><i>upload photo</i></h>
+<input type="file" accept="image/*" onchange="loadFile(event)">
+<p><img id="output" width="200" align="right"/></p>
+<script>
+    var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src=URL.createObjectURL(event.target.files[0]);
+    };
+</script>
+         <a><p id="email"><b>E-MAIL:-</b><b><input type="text" value="  " required></b></p></a>
+         <a><p id="insta"><b>Insta:-</b><b><input type="text" value="  "></b></p></a>
+         <a><p id="linkdin"><b>Linkdin:-</b><input type="text"  value=" "><b></b></p></a>
+
+     </div>
+     <div class="box"></div>
+    
+        <h3><b>Educational Qualifications</b></h3>
+            <table border="2px">
+                <tr id="heading" class="heading">
+                    <td><b>Qualification</b></td>
+                    <td><b>Board</b></td>
+                    <td><b>Percentage / Grades</b></td>
+                    <td><b>Year</b></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                    <td><input type="text" value=" "></td>
+                </tr>
+            </table>
+            <h3>Technical Skills</h3>
+            <p>
+            <ul>
+                <li>
+                <span id="course-name"><input type="text" value=" "></span> </li>
+                <li>
+                <span id="course-name"><input type="text" value=" "></span></li></ul>
+            </p>
+            <h3>Certifications / Awards:</h3>
+            <p>
+            <ul>
+                <li><input type="text" value=" "></li>
+                <li><input type="text" value=" "></li>
+                <li><input type="text" value=" "></li></ul>
+            </p>
+            <h3>Personal Information:</h3>
+
+Pradeep HRC, [06-09-2022 00:03]
+<textarea  class="textarea" id="subject" name="subject" placeholder="write something about you..." style="width:755px"></textarea>
+               
+            <h3>Other Information</h3>
+            <p>
+            <ul>
+                <div>
+                    <h3>Expected salary</h3>
+                   <input type="radio" name="sal" value="As per the company">As per the company
+                   <input type="radio" name="sal" value="As per the company">As per the Employer
+                </div>
+               <div>
+                <h3>Area of interest</h3>
+                <select id="interest" name="interest">
+                    <option value="Software developer">Software developer</option>
+                    <option value="programming">programming</option>
+                    <option value="Management">Management</option>
+                    <option value="Technical support">Technical support</option>
+                    <option value="Designing">Designing</option>
+                  </select>
+               </div>
+
+            <h3>Declaration</h3>
+            <div>
+            I hereby declare that the details furnished above are true and correct to the best of my my and belief. <input type="checkbox" name="I hereby declare">
+            </div>
+     </div>
+     <div id="footer"></div>
+         <input type="Submit" value="Submit" class="Submit">
+         <input type="Reset"  value="Reset"  class="Reset">
+     </form>
+    </body>
+</html>
